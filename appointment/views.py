@@ -13,7 +13,7 @@ from django.contrib import messages
 
 
 
-# Create your views here.
+
 
 
 
@@ -31,23 +31,7 @@ from django.contrib import messages
 #        form=AppointmentForm()
 #    return render(request,'appointment.html',{'form':form})
 
-'''
-def appointment(request):
-    if request.method == 'POST':
-        print('yes')
-        date = request.POST['date']
-        patient_name = request.POST['patient_name']
-        doctor = request.POST['doctor']
-        time = request.POST['time']
-        user = request.user
-        appointments=Appointment(user=user,date=date,patient_name=patient_name,doctor=doctor,time=time)
-        appointments.save()
-        print(user)
-        return redirect('homepage')
-    doctor=Doctor.objects.all()
-    return render(request, 'appointment.html',{'doctor':doctor})
 
-'''
 
 def register(request):
     if request.method=='POST':
